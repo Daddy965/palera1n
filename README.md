@@ -1,8 +1,8 @@
 <h1 align="center">
     <img src="https://avatars.githubusercontent.com/u/114239186?s=100&v=4" alt="palera1n logo">
-    <p>palera1n</p>
+    <p>checkp4le</p>
 </h1>
-<h3 align="center">An iOS 15.0-16.2 work-in-progress, (semi-)tethered checkm8 jailbreak.</h3>
+<h3 align="center">A fork of palera1n using checkra1n to boot, to re-enable SEP on A10</h3>
 <p align="center">
     <strong><a href="CHANGELOG.md">Change Log</a></strong>
     •
@@ -12,7 +12,7 @@
 </p>
 
 # How does it work?
-It boots the device with multiple patches required. On first run, it'll boot a ramdisk which dumps your onboard blob, creates a fakefs (if using semi tethered), installs the loader app, and patches your kernel.
+It boots the device with multiple patches required. On first run, it'll boot a ramdisk sets up the file system, creates a fakefs (if using semi tethered), installs the loader app. When booting, it uses checkra1n 0.1337.0 with a custom kernel patchfinder.
 
 # Issues
 ### Need help?
@@ -53,10 +53,9 @@ Thank you so much to our Patreons that make the future development possible! You
   - Python 3 must be installed.
 
 ### A10 and A11 devices
-- On A10 and A11, **you must disable your passcode while in the jailbroken state**.
-  - On iOS 16 A10+, if you EVER enabled a passcode on 16, you have to reset through the settings app/restore with a computer
-  - On A10, this can be fixed in the future by implementing blackbird.
-  - On A11, we don't have a SEP exploit yet.
+- On A11, **you must disable your passcode while in the jailbroken state**.
+  - On iOS 16 A11, if you EVER enabled a passcode on 16, you have to reset through the settings app/restore with a computer
+  - On A11, we don't have a SEP exploit yet, so this cannot be fixed.
 
 # How to use?
 
